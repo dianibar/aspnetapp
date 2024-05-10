@@ -47,6 +47,7 @@ jobs:
           echo $Env:ECR_REGISTRY/
           echo $Env:ECR_REPOSITORY
           echo $Env:IMAGE_TAG
+          echo "$($Env:ECR_REGISTRY)/$($Env:ECR_REPOSITORY):$($Env:IMAGE_TAG)"
           echo docker build -t $Env:ECR_REGISTRY/$Env:ECR_REPOSITORY:$Env:IMAGE_TAG .
           docker build -t $Env:ECR_REGISTRY/$Env:ECR_REPOSITORY:$Env:IMAGE_TAG .
           docker push $Env:ECR_REGISTRY/$Env:ECR_REPOSITORY:$Env:IMAGE_TAG
