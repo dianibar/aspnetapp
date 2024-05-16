@@ -40,7 +40,7 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          # Build a docker container and
+          # Build a docker container and test
           # push it to ECR so that it can
           # be deployed to ECS.
           cd aspnetapp
